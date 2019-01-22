@@ -1,0 +1,124 @@
+@import "./node_modules/sanitize.css/sanitize.css"
+
+html, body
+  width: 100%
+  height: 100%
+  font-size: 16px
+  font-family: "-apple-system", "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif
+
+$bg_green: #001a0b
+$accent_color: #ff6633
+$white: #fff
+$black: #000
+// $editor_green: #193023
+$editor_green: lighten($bg_green, 8%)
+
+#couldntbebetter
+  width: 100%
+  height: 100%
+
+.Root_App
+  display: flex
+  flex-direction: column
+  width: 100%
+  height: 100%
+.Root_App__1
+
+.Root_App__2
+  flex-grow: 1
+
+
+
+.Header
+  padding: .5rem 1rem
+  background: $bg_green
+  color: $white
+.Header__title
+  margin: 0
+  font-size: 1.375rem
+  font-family: "Kokoro"
+  &::first-letter
+    color: $accent_color
+    font-size: 125%
+
+
+.Frame
+  display: flex
+  width: 100%
+  height: 100%
+
+.Frame__1
+  flex-grow: 1
+.Frame__2
+  width: calc(100% / 1618 * 618)
+  height: 100%
+
+.Generated
+  width: 100%
+  height: 100%
+  background: url("./generator_bg.png")
+
+.Canvas
+
+.Editor
+  display: flex
+  flex-direction: column
+  height: 100%
+  color: $white
+  background: $bg_green
+.Editor__input_label_wrapper
+  margin: .5rem .5rem 0
+.Editor__input_label
+  width: 100%
+  padding: .5rem
+  background: $editor_green
+  border: none
+  color: $white
+  &::placeholder
+    color: $white
+.Editor__input_position_elems
+
+
+.Editor__input_position_label
+  margin: 0 0 0 .5rem
+.Editor__input_position
+  width: 4rem
+  margin: .875rem .5rem
+  padding: .25rem .5rem
+  background: $editor_green
+  border: none
+  color: $white
+
+.Editor__label
+  padding: 0 .5rem
+  font-size: .875rem
+  &::first-letter
+    color: $accent_color
+    font-size: 1rem
+  // background: $editor_green
+.Editor__paper_type
+  width: 40px
+  height: 40px
+
+
+.Editor__image_list
+  display: flex
+  list-style: none
+  margin: 0
+  padding: 0
+.Editor__image_list_item
+  margin: 1rem
+
+.Editor__grow_space
+  flex-grow: 1
+
+.Editor__request_to_create_namecard
+  padding: 1rem
+  text-align: center
+  color: #888
+  background: darken($bg_green, 20%)
+  transition: color 1s, background 1s
+
+.-is_active
+  color: $white
+  background: $accent_color
