@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./style.sass";
 
+const API_ENDPOINT = "http://api.proto.namecard.takumi.io";
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -80,7 +82,7 @@ export default class App extends React.Component {
       },
     };
 
-    const response = await fetch("http://devenv.takumi.io:3000/namecard_requesting", options);
+    const response = await fetch(`${API_ENDPOINT}/namecard_requesting`, options);
     const json = await response.json();
 
     if ( json.message == "is OK" ) {
